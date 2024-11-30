@@ -1,0 +1,9 @@
+<div class="app">
+  <h1>Task Tracker</h1>
+  <form (ngSubmit)="addTask()" class="add-task-form">
+    <input [(ngModel)]="newTask.title" name="title" placeholder="Task Title" required />
+    <textarea [(ngModel)]="newTask.description" name="description" placeholder="Task Description"></textarea>
+    <button type="submit">Add Task</button>
+  </form>
+  <app-task-list [tasks]="tasks" (taskDeleted)="deleteTask($event)"></app-task-list>
+</div>

@@ -1,0 +1,8 @@
+<div>
+  <app-task
+    *ngFor="let task of tasks; let i = index"
+    [task]="task"
+    (taskCompleted)="handleTaskCompleted(i)"
+    (taskDeleted)="handleTaskDeleted(i)">
+  </app-task>
+</div>
